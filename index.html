@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>My Games</title>
+
+    <link rel="icon" type="image/png" href="myIcon.png" />
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+
+
+</head>
+<body>
+<h1>GAMES</h1>
+
+    <div id="main">
+
+        <div id="menu">
+            <ul>
+                <li>
+                    <p id="pDice">Dice</p>
+                </li>
+                <li>
+                    <p id="pCannonball">Cannonball</p>
+                </li>
+                <li>
+                    <p id="pSling">Sling</p>
+                </li>
+                <li>
+                    <p id="pMemory">Memory</p>
+                </li>
+                <li>
+                    <p id="pQuiz">Quiz</p>
+                </li>
+                <li>
+                    <p id="pLabyrinth">Labyrinth</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="spec">
+
+            <div id="dice" class="gameBox">
+                <h2>DICE</h2>
+                <img src="images/dice.png"/>
+                <p class="gameP">
+                    DICE is a computer implementation of popular game known as "craps".
+                </p>
+                <input class="playButton" type="button" value="Play" onclick="playDice()"/>
+            </div>
+
+            <div id="cannonball" class="gameBox">
+                <h2>CANONBALL</h2>
+                <p class="gameP">CANNONBALL - game thought as a simulator of balistic movement of shot body within
+                    gravitation field. The program calculates the curved path of cannonball according to the physical
+                    law of gravitation as well as the landing place using two parameters given by the player : initial
+                    speed and the angle of the shot.
+                </p>
+                <input class="playButton" type="button" value="Play" onclick="playCannonball()"/>
+            </div>
+
+            <div id="sling" class="gameBox">
+                <h2>SLING</h2>
+                <p class="gameP">SLING simulates shooting with a slingshot. The bullet moves across the screen along
+                    the track corresponding to the angle of shot and the strain of the sling.
+                </p>
+                <input class="playButton" type="button" value="Play" onclick="playSling()"/>
+            </div>
+
+            <div id="memory" class="gameBox">
+                <h2>MEMORY</h2>
+                <p class="gameP">MEMORY presents series of cards dealt face down. The player clicks on the first card,
+                    then it reveals its content. If he clicked two cards of the same value one after the other they are
+                    removed from the board, otherwise they are reversed again. The game continues until the player will
+                    find all the matches. In addition measured and displayed is the time elapsed from the start of
+                    the game.
+                </p>
+                <input class="playButton" type="button" value="Play" onclick="playMemory()"/>
+            </div>
+
+            <div id="quiz" class="gameBox">
+                <h2>QUIZ</h2>
+                <p class="gameP">QUIZ shows the player four rectangles with the name of states and four rectangles
+                    with the names of capitals. The player is designed to fit capitals of the states, in case of
+                    successful matching rectangles move to each other suggesting proper pair. The program informs
+                    the player about the correct answer.
+                </p>
+                <input class="playButton" type="button" value="Play" onclick="playQuiz()"/>
+            </div>
+
+            <div id="labyrinth" class="gameBox">
+                <h2>LABYRINTH</h2>
+                <p class="gameP">LABYRINTH is a multi - stage game. The player builds a maze with the computer mouse, pointing
+                    the placement of walls. Next is to perform a pawn through the maze. The player also has the option
+                    to save the labyrinth on the local computer for later load the game, even if he close his browser
+                    or shut down the computer.
+                </p>
+                <input class="playButton" type="button" value="Play" onclick="playLabyrinth()"/>
+            </div>
+
+        </div>
+
+        <br class="clearing" />
+
+    </div>
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
