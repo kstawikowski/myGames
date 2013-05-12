@@ -54,6 +54,8 @@ function mOverDice(){
 }
 
 function mOutDice(){
+    pDice.style.textShadow = "none";
+
     divDice.style.display = "none";
 }
 
@@ -83,6 +85,8 @@ function mOverCannonball(){
 }
 
 function mOutCannonball(){
+    pCannonball.style.textShadow = "none";
+
     divCannonball.style.display = "none";
 }
 
