@@ -20,21 +20,21 @@ pCannonball.addEventListener("mouseover", mOverCannonball, false);
 pCannonball.addEventListener("mouseout", mOutCannonball, false);
 pCannonball.addEventListener("click", mClickCannonball, false);
 
-/*pSling.addEventListener("mouseover", mOverSling, false);
- pSling.addEventListener("mouseout", mOutSling, false);
- pSling.addEventListener("click", mClickSling, false);
+pSling.addEventListener("mouseover", mOverSling, false);
+pSling.addEventListener("mouseout", mOutSling, false);
+pSling.addEventListener("click", mClickSling, false);
 
- pMemory.addEventListener("mouseover", mOverMemory, false);
- pMemory.addEventListener("mouseout", mOutMemory, false);
- pMemory.addEventListener("click", mClickMemory, false);
+pMemory.addEventListener("mouseover", mOverMemory, false);
+pMemory.addEventListener("mouseout", mOutMemory, false);
+pMemory.addEventListener("click", mClickMemory, false);
 
- pQuiz.addEventListener("mouseover", mOverQuiz, false);
- pQuiz.addEventListener("mouseout", mOutQuiz, false);
- pQuiz.addEventListener("click", mClickQuiz, false);
+pQuiz.addEventListener("mouseover", mOverQuiz, false);
+pQuiz.addEventListener("mouseout", mOutQuiz, false);
+pQuiz.addEventListener("click", mClickQuiz, false);
 
- pLabyrinth.addEventListener("mouseover", mOverLabyrinth, false);
- pLabyrinth.addEventListener("mouseout", mOutLabyrinth, false);
- pLabyrinth.addEventListener("click", mClickLabyrinth, false);*/
+pLabyrinth.addEventListener("mouseover", mOverLabyrinth, false);
+pLabyrinth.addEventListener("mouseout", mOutLabyrinth, false);
+pLabyrinth.addEventListener("click", mClickLabyrinth, false);
 
 function mOverDice(){
     pCannonball.style.textShadow = "none";
@@ -98,6 +98,145 @@ function mClickCannonball() {
     pCannonball.removeEventListener("mouseout", mOutCannonball, false);
 }
 
+
+function mOverSling(){
+    pDice.style.textShadow = "none";
+    pCannonball.style.textShadow = "none";
+    pMemory.style.textShadow = "none";
+    pQuiz.style.textShadow = "none";
+    pLabyrinth.style.textShadow = "none";
+
+    pSling.addEventListener("mouseout", mOutSling, false);
+
+    divDice.style.display = "none";
+    divCannonball.style.display = "none";
+    divSling.style.display = "block";
+    divMemory.style.display = "none";
+    divQuiz.style.display = "none";
+    divLabyrinth.style.display = "none";
+}
+
+function mOutSling(){
+    pSling.style.textShadow = "none";
+
+    divSling.style.display = "none";
+}
+
+function mClickSling() {
+    pSling.style.textShadow = "3px 3px 5px #FF0000";
+
+    divSling.style.display = "block";
+
+    pSling.removeEventListener("mouseout", mOutSling, false);
+}
+
+function mOverMemory(){
+    pDice.style.textShadow = "none";
+    pCannonball.style.textShadow = "none";
+    pSling.style.textShadow = "none";
+    pQuiz.style.textShadow = "none";
+    pLabyrinth.style.textShadow = "none";
+
+    pMemory.addEventListener("mouseout", mOutMemory, false);
+
+    divDice.style.display = "none";
+    divCannonball.style.display = "none";
+    divSling.style.display = "none";
+    divMemory.style.display = "block";
+    divQuiz.style.display = "none";
+    divLabyrinth.style.display = "none";
+}
+
+function mOutMemory(){
+    pMemory.style.textShadow = "none";
+
+    divMemory.style.display = "none";
+}
+
+function mClickMemory() {
+    pMemory.style.textShadow = "3px 3px 5px #FF0000";
+
+    divMemory.style.display = "block";
+
+    pMemory.removeEventListener("mouseout", mOutMemory, false);
+}
+
+function mOverQuiz(){
+    pDice.style.textShadow = "none";
+    pCannonball.style.textShadow = "none";
+    pSling.style.textShadow = "none";
+    pMemory.style.textShadow = "none";
+    pLabyrinth.style.textShadow = "none";
+
+    pQuiz.addEventListener("mouseout", mOutQuiz, false);
+
+    divDice.style.display = "none";
+    divCannonball.style.display = "none";
+    divSling.style.display = "none";
+    divMemory.style.display = "none";
+    divQuiz.style.display = "block";
+    divLabyrinth.style.display = "none";
+}
+
+function mOutQuiz(){
+    pQuiz.style.textShadow = "none";
+
+    divQuiz.style.display = "none";
+}
+
+function mClickQuiz() {
+    pQuiz.style.textShadow = "3px 3px 5px #FF0000";
+
+    divQuiz.style.display = "block";
+
+    pQuiz.removeEventListener("mouseout", mOutQuiz, false);
+}
+
+function mOverLabyrinth(){
+    pDice.style.textShadow = "none";
+    pCannonball.style.textShadow = "none";
+    pSling.style.textShadow = "none";
+    pMemory.style.textShadow = "none";
+    pQuiz.style.textShadow = "none";
+
+    pLabyrinth.addEventListener("mouseout", mOutLabyrinth, false);
+
+    divDice.style.display = "none";
+    divCannonball.style.display = "none";
+    divSling.style.display = "none";
+    divMemory.style.display = "none";
+    divQuiz.style.display = "none";
+    divLabyrinth.style.display = "block";
+}
+
+function mOutLabyrinth(){
+    pLabyrinth.style.textShadow = "none";
+
+    divLabyrinth.style.display = "none";
+}
+
+function mClickLabyrinth(){
+    pLabyrinth.style.textShadow = "3px 3px 5px #FF0000";
+
+    divLabyrinth.style.display = "block";
+
+    pLabyrinth.removeEventListener("mouseout", mOutLabyrinth, false);
+}
 function playDice(){
     window.open("dice/dice.html");
+}
+function playCannonball(){
+    window.open("cannonball/cannonball.html");
+}
+function playSling(){
+    window.open("sling/sling.html");
+}
+function playMemory(){
+    window.open("memory/memory.html");
+}
+function playQuiz(){
+    window.open("quiz/quiz.html");
+}
+function playLabyrinth(){
+    window.open("labyrinth/labyrinth.html");
 }
